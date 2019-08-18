@@ -2,27 +2,27 @@
   "errors": [],
   "warnings": [],
   "version": "4.39.2",
-  "hash": "564698f422375b505920",
-  "time": 6112,
-  "builtAt": 1566154851449,
+  "hash": "6b1e15e27817e323b67e",
+  "time": 1467,
+  "builtAt": 1566155876626,
   "publicPath": "/",
   "outputPath": "/Users/hoenoe/Documents/PROJECTS/2019/WEHATERADIO/website/wehateradio-static-cms/dist",
   "assetsByChunkName": {
-    "main": "main.564698f4.js",
+    "main": "main.6b1e15e2.js",
     "src/containers/Post": "templates/src/containers/Post.ea4083d5.js",
     "src/pages/404": "templates/src/pages/404.31cc1aa2.js",
     "src/pages/about": "templates/src/pages/about.e2bdc219.js",
     "src/pages/blog": "templates/src/pages/blog.7271e1de.js",
     "src/pages/index": "templates/src/pages/index.c280b180.js",
     "styles": [
-      "styles.9451a907.css",
-      "templates/styles.9451a907.js"
+      "styles.af9bbd8f.css",
+      "templates/styles.af9bbd8f.js"
     ],
     "vendors~main": "templates/vendors~main.7b2a642d.js"
   },
   "assets": [
     {
-      "name": "main.564698f4.js",
+      "name": "main.6b1e15e2.js",
       "size": 6640,
       "chunks": [
         0
@@ -33,7 +33,7 @@
       "emitted": true
     },
     {
-      "name": "styles.9451a907.css",
+      "name": "styles.af9bbd8f.css",
       "size": 361,
       "chunks": [
         6
@@ -99,7 +99,7 @@
       "emitted": true
     },
     {
-      "name": "templates/styles.9451a907.js",
+      "name": "templates/styles.af9bbd8f.js",
       "size": 82,
       "chunks": [
         6
@@ -130,10 +130,10 @@
         0
       ],
       "assets": [
-        "styles.9451a907.css",
-        "templates/styles.9451a907.js",
+        "styles.af9bbd8f.css",
+        "templates/styles.af9bbd8f.js",
         "templates/vendors~main.7b2a642d.js",
-        "main.564698f4.js"
+        "main.6b1e15e2.js"
       ],
       "children": {},
       "childAssets": {}
@@ -147,10 +147,10 @@
         0
       ],
       "assets": [
-        "styles.9451a907.css",
-        "templates/styles.9451a907.js",
+        "styles.af9bbd8f.css",
+        "templates/styles.af9bbd8f.js",
         "templates/vendors~main.7b2a642d.js",
-        "main.564698f4.js"
+        "main.6b1e15e2.js"
       ],
       "children": {},
       "childAssets": {}
@@ -217,7 +217,7 @@
         "main"
       ],
       "files": [
-        "main.564698f4.js"
+        "main.6b1e15e2.js"
       ],
       "hash": "7546aac216ad36690435",
       "siblings": [
@@ -1444,10 +1444,10 @@
         "styles"
       ],
       "files": [
-        "styles.9451a907.css",
-        "templates/styles.9451a907.js"
+        "styles.af9bbd8f.css",
+        "templates/styles.af9bbd8f.js"
       ],
-      "hash": "9451a90708e613ee1fed",
+      "hash": "af9bbd8f0c06484716e4",
       "siblings": [
         0,
         7
@@ -1522,7 +1522,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 4,
-          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1566154847484\n      var cssReload = require(\"/Users/hoenoe/Documents/PROJECTS/2019/WEHATERADIO/website/wehateradio-static-cms/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1566155876112\n      var cssReload = require(\"/Users/hoenoe/Documents/PROJECTS/2019/WEHATERADIO/website/wehateradio-static-cms/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
         },
         {
           "id": "",
@@ -24120,7 +24120,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 4,
-      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1566154847484\n      var cssReload = require(\"/Users/hoenoe/Documents/PROJECTS/2019/WEHATERADIO/website/wehateradio-static-cms/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1566155876112\n      var cssReload = require(\"/Users/hoenoe/Documents/PROJECTS/2019/WEHATERADIO/website/wehateradio-static-cms/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
     },
     {
       "id": 132,
