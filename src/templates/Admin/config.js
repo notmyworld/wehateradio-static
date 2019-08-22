@@ -4,7 +4,7 @@ import SettingsConfig from '../../components/Settings/config';
 import HomeConfig from '../../templates/Home/config';
 
 // import FormConfig from 'src/templates/Form/config';
-import BlogPostConfig from '../../templates/BlogPostConfig/config';
+import { BlogPostConfig } from '../BlogPost/config';
 
 export const config = {
   backend: {
