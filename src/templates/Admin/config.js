@@ -4,7 +4,7 @@ import SettingsConfig from '../../components/Settings/config';
 import HomeConfig from '../../templates/Home/config';
 
 // import FormConfig from 'src/templates/Form/config';
-// import { BlogPostConfig, BlogPostConfig, CaseStudyConfig } from 'src/templates/Subpage/config';
+import BlogPostConfig from '../../templates/BlogPostConfig/config';
 
 export const config = {
   backend: {
@@ -33,6 +33,7 @@ export const config = {
       delete: false,
       files: [HomeConfig],
     },
+    BlogPostConfig
     // FormConfig,
   ],
 };
