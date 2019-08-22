@@ -1,0 +1,17 @@
+// colors
+a.color-theme,
+.color-theme {
+  color: $color-theme;
+}
+
+.bg-color-theme-secondary {
+  background-color: $color-theme-secondary ;
+}
+
+a.navbar-item.is-active,
+a.navbar-item:hover,
+a.navbar-link.is-active,
+a.navbar-link:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}

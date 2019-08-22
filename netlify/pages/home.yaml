@@ -1,0 +1,21 @@
+title: we hate
+hero:
+  particles: true
+  title: The best APIs start with Stoplight
+  subtitle: >-
+    The API design management platform powering the world’s leading API first companies.
+meta:
+  description: >-
+    Using Stoplight you can create OpenAPI descriptions, documentation, mock
+    servers much faster than other API tools, with no specialized knowledge
+    required in one centralized platform.
+  favicon: /images/mark_light_bg.png
+  image: /images/studio/hero.png
+  title: API Design Management for Teams and Enterprises | Stoplight
+  twitter:
+    description: >-
+      Using Stoplight you can create OpenAPI descriptions, documentation, mock
+      servers much faster than other API tools, with no specialized knowledge
+      required in one centralized platform.
+    image: /images/studio/hero.png
+    title: API Design Management for Teams and Enterprises | Stoplight

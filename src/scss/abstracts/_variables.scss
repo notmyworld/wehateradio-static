@@ -1,0 +1,42 @@
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+$desktop: 600px;
+$widescreen: $desktop;
+$fullhd: 800px;
+
+// Colors
+$color-theme: #da1f28;
+$color-theme-secondary: #0a0a0a;
+
+// Body
+$body-color: $black;
+
+// Link
+$link: $black;
+$link-hover: $link;
+
+// Text colors
+$text: $white;
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// Generic variables
+$body-background-color: $black;
+
+//////////////////////////
+// Navbar
+//////////////////////////
+$navbar-background-color: $white;
+$tabs-link-color: $black;
+// tabs
+$tabs-link-hover-color: initial;
+$tabs-link-hover-border-bottom-color: $black;
+$tabs-link-hover-color: $black;
+$tabs-link-active-border-bottom-color: $black;
+$tabs-border-bottom-color: $black;
+$tabs-link-padding: .5em 4px;
+
+// Font
+$font-family: "PT Mono", monospace;
+$font-body: "PT Mono", monospace;
+$font-headings: "Avenir Next LT Pro", monospace;

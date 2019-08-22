@@ -10,7 +10,9 @@ export default function Post() {
       <Link to="/blog/">{'<'} Back</Link>
       <br />
       <h3>{post.title}</h3>
-      <p>{post.body}</p>
+      {console.log(post.slug)}
+      {post.contents}
+      {post.date}
     </div>
   )
 }

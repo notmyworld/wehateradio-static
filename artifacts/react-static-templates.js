@@ -3,12 +3,19 @@
   
 // Template Map
 export default {
-  '../src/pages/404.js': require('../src/pages/404.js').default,
-'../src/pages/about.js': require('../src/pages/about.js').default,
-'../src/pages/blog.js': require('../src/pages/blog.js').default,
-'../src/pages/index.js': require('../src/pages/index.js').default,
-'../src/containers/Post': require('../src/containers/Post').default
+  '../src/templates/404.js': require('../src/templates/404.js').default,
+'../src/templates/_Home.js': require('../src/templates/_Home.js').default,
+'../src/templates/about.js': require('../src/templates/about.js').default,
+'../src/templates/Admin/config.js': require('../src/templates/Admin/config.js').default,
+'../src/templates/Admin/index.js': require('../src/templates/Admin/index.js').default,
+'../src/templates/blog.js': require('../src/templates/blog.js').default,
+'../src/templates/BlogPost/config.js': require('../src/templates/BlogPost/config.js').default,
+'../src/templates/BlogPost/index.js': require('../src/templates/BlogPost/index.js').default,
+'../src/templates/Home/config.js': require('../src/templates/Home/config.js').default,
+'../src/templates/Home/index.js': require('../src/templates/Home/index.js').default,
+'../src/templates/Home': require('../src/templates/Home').default,
+'../src/templates/Admin': require('../src/templates/Admin').default
 }
 
-export const notFoundTemplate = '../src/pages/404.js'
+export const notFoundTemplate = '../src/templates/404.js'
 

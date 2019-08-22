@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-5477.000000, -2959.000000)">
+            <g id="Group-2" transform="translate(5477.000000, 2959.000000)">
+                <path d="M391.330398,461.385658 L391.330398,462.208723 L109.161252,462.208723 L109.161252,461.385658 L108.359757,461.385658 L108.359757,38.2397875 L392.088753,38.2397875 L392.088753,461.385658 L391.330398,461.385658 Z" id="Rectangle" fill="#DA1F28" transform="translate(250.224255, 250.224255) rotate(-45.000000) translate(-250.224255, -250.224255) "></path>
+                <rect id="Rectangle" fill="#000000" transform="translate(250.216629, 250.216629) rotate(-45.000000) translate(-250.216629, -250.216629) " x="202.906893" y="38.2213766" width="94.6194714" height="423.990505"></rect>
+                <g id="Group" transform="translate(208.561086, 170.022624)" fill="#FFFFFF">
+                    <rect id="Rectangle-3" x="27.2036199" y="0" width="28.3371041" height="122.41629"></rect>
+                    <rect id="Rectangle-4" x="0" y="66.8755656" width="83.8778281" height="27.2036199"></rect>
+                </g>
+                <g id="Group-Copy-2" transform="translate(292.438914, 256.167421)" fill="#FFFFFF">
+                    <rect id="Rectangle-3" x="27.2036199" y="-1.13686838e-13" width="28.3371041" height="122.41629"></rect>
+                    <rect id="Rectangle-4" x="-5.68434189e-14" y="66.8755656" width="83.8778281" height="27.2036199"></rect>
+                </g>
+                <g id="Group-Copy" transform="translate(124.683258, 85.011312)" fill="#FFFFFF">
+                    <rect id="Rectangle-3" x="27.2036199" y="0" width="28.3371041" height="122.41629"></rect>
+                    <rect id="Rectangle-4" x="-2.84217094e-14" y="66.8755656" width="83.8778281" height="27.2036199"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

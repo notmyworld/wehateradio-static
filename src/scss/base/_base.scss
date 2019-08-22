@@ -1,0 +1,42 @@
+html {
+  background-color: $white;
+}
+
+body {
+  font-family: $font-body;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a {
+  position: relative;
+  // display: block;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(50%);
+        transform: translateY(50%);
+    left: 0;
+    background-color: #000000;
+    width: 0;
+    height: 1px;
+    transition: ease .4s width;
+  }
+  &.active::before,
+  &:focus::before,
+  &:hover::before {
+    width: 100%;
+  }
+  &.no-hover::before {
+    display: none;
+  }
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget.fb_iframe_widget span iframe {
+  width: 100% !important;
+}
+.fb_iframe_widget, .fb_iframe_widget iframe[style] {
+  width: 100% !important;
+}

@@ -1,0 +1,26 @@
+// Vendors
+@import "~basscss-sass/scss/padding";
+@import "~basscss-sass/scss/margin";
+@import "~basscss-sass/scss/responsive-margin";
+@import "~basscss-sass/scss/responsive-padding";
+@import "~bulma_scss/scss/utilities/all";
+// abstracts
+@import "scss/abstracts/all";
+// Libraries
+@import "~bulma_scss/bulma.scss";
+// base
+@import "scss/base/all";
+// components
+@import "scss/components/all";
+// elements
+@import "scss/elements/all";
+// layout
+@import "scss/layout/all";
+
+* {
+  scroll-behavior: smooth;
+}
+
+.content {
+  padding: 1rem;
+}
