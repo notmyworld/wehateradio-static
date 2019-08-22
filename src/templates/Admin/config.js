@@ -9,21 +9,20 @@ import BlogPostConfig from '../../templates/BlogPostConfig/config';
 export const config = {
   backend: {
     name: 'git-gateway',
-    branch: 'develop',
-    squash_merges: true,
-    commit_messages: {
-      create: 'Create {{collection}} “{{slug}}”',
-      update: 'Update {{collection}} “{{slug}}”',
-      delete: 'Delete {{collection}} “{{slug}}”',
-      uploadMedia: 'Upload “{{path}}”',
-      deleteMedia: 'Delete “{{path}}”',
-    },
+    branch: 'master',
+    // squash_merges: true,
+    // commit_messages: {
+    //   create: 'Create {{collection}} “{{slug}}”',
+    //   update: 'Update {{collection}} “{{slug}}”',
+    //   delete: 'Delete {{collection}} “{{slug}}”',
+    //   uploadMedia: 'Upload “{{path}}”',
+    //   deleteMedia: 'Delete “{{path}}”',
+    // },
   },
-  publish_mode: 'editorial_workflow',
-  media_folder: 'public/images',
-  public_folder: '/images',
-  display_url: 'http://wehateradio.net',
-  site_domain: 'cms.netlify.com',
+  media_folder: 'public/uploads',
+  public_folder: '/uploads',
+  // display_url: 'http://wehateradio.net',
+  // site_domain: 'cms.netlify.com',
   collections: [
     SettingsConfig,
     {
