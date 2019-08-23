@@ -1,7 +1,6 @@
 import SettingsConfig from '../../components/Settings/config';
 
 // import AboutConfig from 'src/templates/About/config';
-import HomeConfig from '../../templates/Home/config';
 
 // import FormConfig from 'src/templates/Form/config';
 import { BlogPostConfig } from '../BlogPost/config';
@@ -25,14 +24,27 @@ export const config = {
   site_domain: 'cms.netlify.com',
   collections: [
     SettingsConfig,
+    BlogPostConfig,
     {
-      label: 'Pages',
-      label_singular: 'Page',
-      name: 'pages',
-      delete: false,
-      files: [HomeConfig],
-    },
-    BlogPostConfig
+      label: 'Home',
+      name: 'home',
+      file: 'netlify/pages/home.yaml',
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Publish Date", name: "date", widget: "datetime" },
+        { label: "Description", name: "description", widget: "string" },
+        { label: "Body", name: "body", widget: "markdown" }
+      ],
+    }
     // FormConfig,
   ],
 };
+
+
+// {
+//   label: 'Pages',
+//   label_singular: 'Page',
+//   name: 'pages',
+//   delete: false,
+//   files: [HomeConfig],
+// },

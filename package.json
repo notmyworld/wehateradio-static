@@ -23,6 +23,7 @@
     "react-static-plugin-source-filesystem": "^7.0.0"
   },
   "devDependencies": {
+    "typescript": "3.5.x",
     "autoprefixer": "9.6.x",
     "babel-eslint": "9.x",
     "basscss-sass": "*",

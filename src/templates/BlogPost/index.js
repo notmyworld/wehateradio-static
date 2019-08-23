@@ -16,10 +16,12 @@ import { convertMarkdownToHTML } from '../../utils/markdown/index.js';
    return (
      <div>
        <br />
-       <h3>{post.title}</h3>
-       {console.log(post.slug)}
-       {post.contents}
-       {post.date}
+
      </div>
    )
  }
+
+ // <h3>{post.title}</h3>
+ // {console.log(post.slug)}
+ // {post.contents}
+ // {post.date}

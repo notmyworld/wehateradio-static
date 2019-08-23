@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { withRouteData, withSiteData, Link } from 'react-static';
+import { withRouteData, withSiteData } from 'react-static';
 
 export const Home = (collections) => (<div>
     <section className="container">

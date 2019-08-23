@@ -46,12 +46,12 @@ export async function getRoutes() {
   const routes = [
     {
       path: '/',
-      template: 'src/templates/Home',
+      template: 'src/templates/Home/index',
       getData: () => home,
     },
     {
       path: '/admin',
-      template: 'src/templates/Admin'
+      template: 'src/templates/Admin/index'
     },
     // {
     //   path: '404',
@@ -68,7 +68,7 @@ export async function getRoutes() {
     // ...createListRoutes('src/templates/Lists', lists, allPages),
     // ...createListRoutes('src/templates/Lists', authors, allPages, authorProps),
     ...createRoutes('./src/templates/BlogPost', blogPosts),
-    // ...createRoutes('src/templates/Subpage', caseStudies, allPages, caseStudyProps),
+    ...createRoutes('./src/templates/Home', home),
     // ...createRoutes('src/templates/Subpage', other, allPages),
     // ...createRoutes('src/templates/Form', forms, allPages),
     // ...createRoutes('src/templates/Landing', landings, allPages, null, true),
