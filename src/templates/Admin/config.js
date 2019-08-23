@@ -22,7 +22,7 @@ export const config = {
   media_folder: 'public/uploads',
   public_folder: '/uploads',
   // display_url: 'http://wehateradio.net',
-  // site_domain: 'cms.netlify.com',
+  site_domain: 'cms.netlify.com',
   collections: [
     SettingsConfig,
     {

@@ -3,9 +3,17 @@ import path from 'path'
 // import axios from 'axios'
 // import jdown from 'jdown'
 
+import chokidar from 'chokidar';
+import { rebuildRoutes } from 'react-static/node';
+
 import { getRoutes } from './src/utils/getRoutes';
 import { getFile } from './src/utils/files';
 import { NETLIFY_PATH, SITE_ROOT } from './src/utils/settings';
+
+
+if (process.env.NODE_ENV !== 'production') {
+  chokidar.watch(NETLIFY_PATH).on('change', () => rebuildRoutes());
+}
 
 // TYPES
 // posts,
@@ -31,6 +39,8 @@ import { NETLIFY_PATH, SITE_ROOT } from './src/utils/settings';
 // });
 
 export default {
+
+  siteRoot: SITE_ROOT ? SITE_ROOT : undefined,
 
   getSiteData: () => getFile(`${NETLIFY_PATH}/settings.yaml`),
 

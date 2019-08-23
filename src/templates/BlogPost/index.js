@@ -10,14 +10,11 @@ import { convertMarkdownToHTML } from '../../utils/markdown/index.js';
 // import { Layout } from '../../components/Layout';
 
  import { useRouteData } from 'react-static'
- //
- import { Link } from 'components/Router'
 
  export default function Post() {
    const { post } = useRouteData()
    return (
      <div>
-       <Link to="/blog/">{'<'} Back</Link>
        <br />
        <h3>{post.title}</h3>
        {console.log(post.slug)}

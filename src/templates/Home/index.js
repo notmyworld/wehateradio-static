@@ -7,11 +7,11 @@ export default withRouteData(({ jdown, reactStatic, collections }) => (
       <div className="">
         <div className="">
           <h2>
-            Posts
+            test home
           </h2>
         </div>
         <div className="py3">
-
+          test home
         </div>
       </div>
     </section>

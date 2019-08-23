@@ -5,6 +5,8 @@ import { getFile, getFiles } from './files';
 import { NETLIFY_PATH, DEFAULT_PAGINATION_PAGE_SIZE, IS_PRODUCTION, RELATED_PAGES_LIMIT } from './settings';
 import get from 'lodash.get';
 
+import Admin from '../templates/Admin'
+
 export async function getRoutes() {
   let [
     home,
@@ -47,6 +49,10 @@ export async function getRoutes() {
       template: 'src/templates/Home',
       getData: () => home,
     },
+    {
+      path: '/admin',
+      template: 'src/templates/Admin'
+    },
     // {
     //   path: '404',
     //   template: 'src/templates/404',
@@ -57,29 +63,16 @@ export async function getRoutes() {
     //   getData: () => about,
     // },
 
+
+
     // ...createListRoutes('src/templates/Lists', lists, allPages),
     // ...createListRoutes('src/templates/Lists', authors, allPages, authorProps),
-    // ...createRoutes('src/templates/Subpage', blogPosts, allPages, blogPostProps),
+    ...createRoutes('./src/templates/BlogPost', blogPosts),
     // ...createRoutes('src/templates/Subpage', caseStudies, allPages, caseStudyProps),
     // ...createRoutes('src/templates/Subpage', other, allPages),
     // ...createRoutes('src/templates/Form', forms, allPages),
     // ...createRoutes('src/templates/Landing', landings, allPages, null, true),
   ];
-
-  // Don't include admin route in production
-  if (!IS_PRODUCTION) {
-    routes.push({
-      path: '/admin',
-      template: 'src/templates/Admin',
-      getData: () => {
-        return {
-          header: null,
-          footer: null,
-        };
-      },
-    });
-  }
-
   return routes;
 }
 
@@ -147,14 +140,14 @@ function createRoutes(template, pages, allPages, propFactory, noindex) {
 
       routes.push({
         path: page.path,
-        template: page.hasSandbox ? 'src/templates/Spectral' : template,
+        template: template,
         noindex: noindex ? noindex : get(page, 'meta.robots', '').includes('noindex'),
         getData: () => {
           return {
             ...page,
             ...(propFactory ? propFactory(page) : {}),
             publishedDate: formatDate(page.publishedDate),
-            relatedPages: getRelatedPages(page, allPages),
+            // relatedPages: getRelatedPages(page, allPages),
           };
         },
       });
@@ -240,81 +233,64 @@ function createListRoutes(template, listPages, allPages, propFactory) {
   return routes;
 }
 
-function authorProps(props) {
-  return {
-    hero: {
-      aligned: 'left',
-    },
-  };
-}
+// function authorProps(props) {
+//   return {
+//     hero: {
+//       aligned: 'left',
+//     },
+//   };
+// }
 
-function caseStudyProps(props) {
-  const sidebar = props.sidebar || {};
-  sidebar.info = sidebar.info || {};
-  sidebar.info.image = props.image;
-
-  return {
-    className: 'case-study',
-    pageName: 'Case Study',
-    sidebar,
-    hero: {
-      aligned: 'left',
-    },
-    includeToc: false,
-    backgroundSize: 'contain',
-  };
-}
-
-function blogPostProps(props) {
-  return {
-    breadCrumbs: [{ title: 'Home', path: '/' }, { title: 'Blog', path: '/blog' }, { title: props.title }],
-    hero: {
-      aligned: 'left',
-      contentBgImage: props.image,
-    },
-    meta: {
-      ...props.meta,
-      jld: {
-        breadCrumbs: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, item: { '@id': 'https://stoplight.io/', name: 'Home' } },
-            { '@type': 'ListItem', position: 2, item: { '@id': 'https://stoplight.io/blog/', name: 'Blog' } },
-            {
-              '@type': 'ListItem',
-              position: 3,
-              item: {
-                '@id': `https://stoplight.io/${props.path}`,
-                name: props.title,
-              },
-            },
-          ],
-        }),
-        article: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'NewsArticle',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': `https://stoplight.io/blog/${props.path}`,
-          },
-          headline: props.title,
-          image: [props.image],
-          datePublished: props.publishedDate,
-          dateModified: props.modifiedDate,
-          author: { '@type': 'Person', name: props.author ? props.author.name : null },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Stoplight',
-            logo: {
-              '@type': 'ImageObject',
-              url:
-                'https://d33wubrfki0l68.cloudfront.net/c2cb23ce44d9046f897d797e33ca21c52be6ebd1/63887/images/robot-dude.svg',
-            },
-          },
-          description: props.subtitle,
-        }),
-      },
-    },
-  };
-}
+// function blogPostProps(props) {
+//   return {
+//     breadCrumbs: [{ title: 'Home', path: '/' }, { title: 'Blog', path: '/blog' }, { title: props.title }],
+//     hero: {
+//       aligned: 'left',
+//       contentBgImage: props.image,
+//     },
+//     meta: {
+//       ...props.meta,
+//       jld: {
+//         breadCrumbs: JSON.stringify({
+//           '@context': 'https://schema.org',
+//           '@type': 'BreadcrumbList',
+//           itemListElement: [
+//             { '@type': 'ListItem', position: 1, item: { '@id': 'https://stoplight.io/', name: 'Home' } },
+//             { '@type': 'ListItem', position: 2, item: { '@id': 'https://stoplight.io/blog/', name: 'Blog' } },
+//             {
+//               '@type': 'ListItem',
+//               position: 3,
+//               item: {
+//                 '@id': `https://stoplight.io/${props.path}`,
+//                 name: props.title,
+//               },
+//             },
+//           ],
+//         }),
+//         article: JSON.stringify({
+//           '@context': 'https://schema.org',
+//           '@type': 'NewsArticle',
+//           mainEntityOfPage: {
+//             '@type': 'WebPage',
+//             '@id': `https://stoplight.io/blog/${props.path}`,
+//           },
+//           headline: props.title,
+//           image: [props.image],
+//           datePublished: props.publishedDate,
+//           dateModified: props.modifiedDate,
+//           author: { '@type': 'Person', name: props.author ? props.author.name : null },
+//           publisher: {
+//             '@type': 'Organization',
+//             name: 'Stoplight',
+//             logo: {
+//               '@type': 'ImageObject',
+//               url:
+//                 'https://d33wubrfki0l68.cloudfront.net/c2cb23ce44d9046f897d797e33ca21c52be6ebd1/63887/images/robot-dude.svg',
+//             },
+//           },
+//           description: props.subtitle,
+//         }),
+//       },
+//     },
+//   };
+// }
