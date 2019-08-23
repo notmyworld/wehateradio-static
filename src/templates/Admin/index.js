@@ -17,7 +17,7 @@ const templates = {
   // landings: Landing,
 
   // subpage: Subpage,
-  blogPost: BlogPost,
+  // blogPost: BlogPost,
 };
 
 
@@ -27,14 +27,14 @@ if (typeof window === 'undefined') {
 }
 
 import(`netlify-cms-app`).then(({ default: CMS }) => {
-  console.log(templates, 'templates');
   Object.keys(templates).forEach(collectionName => {
-    console.log(collectionName);
+
     const Template = templates[collectionName];
+    console.log(CMS);
     if (Template) {
       CMS.registerPreviewTemplate(collectionName, ({ entry }) => {
         const props = entry.getIn(['data']).toJS();
-
+        console.log(props);
         return <Template {...convertMarkdownToHTML(props, { includeToc: props.includeToc })} />;
       });
     }
