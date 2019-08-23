@@ -2,7 +2,7 @@ import React from 'react';
 
 // import { About } from 'src/templates/About';
 // import { Form } from 'src/templates/Form';
-import Home from '../Home';
+import { Home } from '../Home';
 import BlogPost from '../BlogPost';
 import { convertMarkdownToHTML } from '../../utils/markdown';
 
@@ -30,9 +30,12 @@ import(`netlify-cms-app`).then(({ default: CMS }) => {
   Object.keys(templates).forEach(collectionName => {
 
     const Template = templates[collectionName];
+    console.log('collectionName', collectionName);
     console.log(CMS);
     if (Template) {
+      console.log('if template');
       CMS.registerPreviewTemplate(collectionName, ({ entry }) => {
+        console.log(entry);
         const props = entry.getIn(['data']).toJS();
         console.log(props);
         return <Template {...convertMarkdownToHTML(props, { includeToc: props.includeToc })} />;
