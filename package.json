@@ -42,7 +42,7 @@
     "markdown-it-anchor": "5.0.x",
     "markdown-it-toc-done-right": "2.0.x",
     "markdown-it-video": "0.6.x",
-    "node-sass": "4.12.x",
+    "node-sass": "4.13.x",
     "postcss-flexbugs-fixes": "4.1.x",
     "sass-loader": "7.1.x",
     "semver": "^6.3.0",
