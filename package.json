@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "lodash.get": "^4.4.2",
     "netlify-cms-app": "^2.9.7",
     "netlify-identity-widget": "^1.5.5",
